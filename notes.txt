@@ -51,3 +51,7 @@ npx husky-init && npm install
 npm install --save-dev nano-staged
 
 npx husky add .husky/pre-commit "npx nano-staged"
+
+commit-zen:
+npm install --save-dev git-cz commitizen
+npx commitizen init cz-conventional-changelog --save-dev --save-exact
