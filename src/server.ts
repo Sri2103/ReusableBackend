@@ -1,5 +1,5 @@
 import express from 'express';
-import { todosRouter } from '@api/todos/todos.router';
+import { todosRouter } from './api/todos/todos.router';
 
 export class HttpServer {
   public app: express.Application;

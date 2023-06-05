@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { BaseRouter } from '../../utils/BaseRouter';
 import { todosController } from './todos.controller';
 
-class TOdosRouter extends BaseRouter {
+class TodosRouter extends BaseRouter {
   constructor() {
     super();
   }
@@ -17,4 +17,4 @@ class TOdosRouter extends BaseRouter {
   }
 }
 
-export const todosRouter = new TOdosRouter().returnApiEndpointRouter;
+export const todosRouter = new TodosRouter().returnApiEndpointRouter;
