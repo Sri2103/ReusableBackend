@@ -1,6 +1,7 @@
+import 'reflect-metadata';
 import express from 'express';
 import cors from 'cors';
-import { todosRouter } from './api/todos/todos.router';
+import { todoRouter } from './api/todo/todo.router';
 import morgan from 'morgan';
 
 export class HttpServer {
@@ -28,7 +29,7 @@ export class HttpServer {
         status: true,
       });
     });
-    this.app.use('/api/todos', todosRouter);
+    this.app.use('/', todoRouter.router);
   }
 }
 
