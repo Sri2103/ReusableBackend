@@ -17,4 +17,4 @@ class TodosRouter extends BaseRouter {
   }
 }
 
-export const todosRouter = new TodosRouter().returnApiEndpointRouter;
+export const todosRouter = new TodosRouter().returnApiEndpointRouter();

@@ -5,7 +5,7 @@ import 'dotenv/config';
 import { dbConnection } from './Database';
 class Main {
   private server: http.Server;
-  private port = 6000;
+  private port = 5000;
 
   constructor() {
     this.server = http.createServer(expressServer);

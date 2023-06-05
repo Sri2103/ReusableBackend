@@ -1,5 +1,7 @@
 import express from 'express';
+import cors from 'cors';
 import { todosRouter } from './api/todos/todos.router';
+import morgan from 'morgan';
 
 export class HttpServer {
   public app: express.Application;
@@ -12,7 +14,11 @@ export class HttpServer {
 
   private addMiddleware() {
     this.app.use(express.json());
+    // for parsing application/x-www-form-urlencoded
     this.app.use(express.urlencoded({ extended: true }));
+    // add cors
+    this.app.use(cors());
+    // add security to the server using helmet middleware
   }
   private addRoutes() {
     this.app.get('/', (req, res) => {
