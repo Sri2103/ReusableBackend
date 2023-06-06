@@ -39,10 +39,10 @@ class Main {
   private startServer() {
     this.server.listen(this.port, async () => {
       console.log(`Server is running on port ${this.port}`);
-      //   await mongoose
-      //     .connect(dbConnection.url, dbConnection.options as ConnectOptions)
-      //     .then(() => console.log('connected to DB'))
-      //     .catch(err => console.error('Unable to connect', err));
+      await mongoose
+        .connect(dbConnection.url, dbConnection.options as ConnectOptions)
+        .then(() => console.log('connected to DB'))
+        .catch(err => console.error('Unable to connect', err));
     });
   }
 }
